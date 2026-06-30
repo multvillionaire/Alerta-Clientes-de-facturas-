@@ -1,7 +1,7 @@
 """Bot de extraccion de estado de cuenta (la 'sabanilla').
 
 Cada corrida:
-  1. Se conecta al ERP (Odoo) en lacasa8a.com.
+  1. Se conecta al ERP (Odoo) usando las credenciales del .env local.
   2. Busca todos los clientes con facturas de venta sin pagar (saldo > 0).
   3. Genera el PDF de estado de cuenta de cada cliente (el mismo reporte
      que se imprime manualmente como 'Sabanilla').

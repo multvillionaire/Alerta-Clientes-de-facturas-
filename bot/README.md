@@ -3,7 +3,7 @@
 ## Resumen del proceso original (manual)
 
 El proceso que se automatiza era, hasta ahora, completamente manual dentro del ERP
-(Odoo, en https://lacasa8a.com):
+(Odoo):
 
 1. Entrar a Ventas > Pedidos > Tableros Usuario.
 2. Por cada Agente (vendedor) de la empresa, entrar a "Ver Facturas Vencidas".
@@ -92,16 +92,18 @@ es la funcion `run()` en `bot.py`.
 
 ## Configuracion (.env)
 
+Copiar `.env.example` a `.env` y llenarlo con los datos reales del ERP
+(no se incluyen en el repositorio por seguridad):
+
 ```
-ODOO_URL=https://lacasa8a.com
-ODOO_DB=lacasa8a
-ODOO_USER=PRUEBAS
-ODOO_PASSWORD=654
+ODOO_URL=
+ODOO_DB=
+ODOO_USER=
+ODOO_PASSWORD=
 ```
 
-Cuando se pase a produccion real, cambiar usuario/contrasena por una
-cuenta dedicada al bot (no la de pruebas), y mover este archivo fuera de
-cualquier respaldo que se comparta con otras personas.
+El archivo `.env` con los datos reales **nunca debe subirse al repositorio**
+(ya esta en `.gitignore`). Usar una cuenta dedicada al bot, no la de pruebas.
 
 ## Como correrlo manualmente
 

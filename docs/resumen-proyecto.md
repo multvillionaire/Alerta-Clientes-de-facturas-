@@ -14,8 +14,8 @@ para cada cliente y agente) y automatizar:
 
 ## Componentes
 
-- **ERP** (`https://lacasa8a.com/web/login`): fuente de los datos de facturación (clientes, facturas,
-  fechas de vencimiento, montos).
+- **ERP** (Odoo, acceso por portal web propio de la empresa): fuente de los datos de facturación
+  (clientes, facturas, fechas de vencimiento, montos).
 - **Integración WhatsApp**: canal de salida para alertas y estados de cuenta, y canal de entrada
   para respuestas de los clientes (confirmaciones de pago, comprobantes).
 - **Motor de reglas / scheduler**: calcula a quién, qué y cuándo enviar.
@@ -55,7 +55,7 @@ Cuando un cliente responde indicando que **ya pagó** (texto tipo "ya está paga
 
 > Este es el flujo que se hace hoy a mano y que el sistema debe reemplazar/automatizar.
 
-1. Ingresar a `https://lacasa8a.com/web/login` con el usuario y contraseña del ERP.
+1. Ingresar al portal web del ERP con el usuario y contraseña correspondientes.
 2. Ir a **Ventas** → menú **Pedidos** → **Tableros usuarios**.
 3. Entrar por **Agente**.
 4. Hacer clic en **Ver Facturas Vencidas**.
@@ -72,10 +72,9 @@ El mismo flujo aplica tanto para ver las facturas **a vencer** como las **ya ven
 
 ### Nota de seguridad
 
-Las credenciales de prueba del ERP (`PRUEBAS` / `654`) se usan hoy para el acceso manual. Cuando se
-automatice la extracción, estas credenciales **no deben quedar en el código ni en el repositorio**:
-deben guardarse como variables de entorno o en un gestor de secretos, y se debe usar un usuario con
-permisos mínimos (idealmente uno dedicado a la integración, distinto del de pruebas).
+Las credenciales del ERP usadas para el acceso manual **no deben quedar en el código ni en el
+repositorio**: deben guardarse como variables de entorno o en un gestor de secretos, y se debe usar
+un usuario con permisos mínimos (idealmente uno dedicado a la integración, distinto del de pruebas).
 
 ## Preguntas abiertas / decisiones pendientes
 
